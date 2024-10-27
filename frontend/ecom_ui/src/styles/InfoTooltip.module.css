@@ -1,0 +1,38 @@
+/* src/styles/InfoTooltip.module.css */
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltipIcon {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 12px;
+  text-align: center;
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 180px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 125%; /* Position the tooltip above */
+  left: 50%;
+  margin-left: -90px; /* Center tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.tooltipContainer:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
